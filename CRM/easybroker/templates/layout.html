@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ssent</title>
+    <script src="https://kit.fontawesome.com/a44d3682ff.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'layout.css' %}" />
+</head>
+<body>
+<div class="main_nav">
+    <h1>SSENT</h1>
+    <a href="/" class="name" id="active">Customer Data </a>
+    <a href="" class="name">Owner Data </a>
+    <a href="" class="name">Delete Customer </a>
+    <a href="" class="name">Delete Owner</a>
+    <a href="EB_logout" class="name">Logout </a>
+    <div class="date">
+        <div class="time">Staff Id :</div>
+        <div class="out">{{request.session.username}}</div>
+        <div class="time" id="today"></div>
+        <div class="out" id="clock" ></div>
+    </div>
+</div>
+<!--------------------------------------nav-end------------------------------------------------------------------------>
+
+<script>
+$(document).ready(function(){
+   setInterval('updateClock()', 1000);
+});
+function updateClock (){
+ 	var currentTime = new Date ( );
+  	var currentHours = currentTime.getHours ( );
+  	var currentMinutes = currentTime.getMinutes ( );
+  	var currentSeconds = currentTime.getSeconds ( );
+  	currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+  	currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+  	var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+  	currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+  	currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+  	var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+   	$("#clock").html(currentTimeString);
+ }
+</script>
+
+<script>
+var monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var date = new Date();
+var dateStr = date.getDate() + "th " + monthName[date.getMonth()] + " " + date.getFullYear();
+
+$("#today ").text(dateStr);
+
+</script>
+
+
+{% block body %}
+{% endblock %}

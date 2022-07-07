@@ -1,0 +1,731 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'index.css' %}">
+<script src="https://kit.fontawesome.com/a44d3682ff.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+<style>
+.tab_head{
+    border:2px solid navy;
+    width:98%;
+    margin-left:1%;
+    height:40px;
+    text-align:center;
+    font-size:20px;
+    background:lightseagreen;
+    color:black;
+    margin-top:10px;
+}
+.aa{
+    border-right:1px dotted white;
+    width:65px;
+    height:38px;
+    float:left;
+}
+.bb{
+    border-right:1px dotted white;
+    width:82px;
+    height:38px;
+    float:left;
+}
+.cc{
+    border-right:1px dotted white;
+    width:185px;
+    height:38px;
+    float:left;
+}
+.dd{
+    border-right:1px dotted white;
+    width:95px;
+    height:38px;
+    float:left;
+}
+.ee{
+    border-right:1px dotted white;
+    width:95px;
+    height:38px;
+    float:left;
+}
+.gg{
+    border-right:1px dotted white;
+    width:65px;
+    height:38px;
+    float:left;
+}
+.hh{
+    border-right:1px dotted white;
+    width:80px;
+    height:38px;
+    float:left;
+}
+.ii{
+    border-right:1px dotted white;
+    width:90px;
+    height:38px;
+    float:left;
+}
+.jj{
+    border-right:1px dotted white;
+    width:125px;
+    height:38px;
+    float:left;
+}
+.kk{
+    border-right:1px dotted white;
+    width:60px;
+    height:38px;
+    float:left;
+}
+.mm{
+    border-right:1px dotted white;
+    width:90px;
+    height:38px;
+    float:left;
+}
+.nn{
+    border-right:1px dotted white;
+    width:98px;
+    height:38px;
+    float:left;
+}
+.oo{
+    border-right:1px dotted white;
+    width:64px;
+    height:38px;
+    float:left;
+}
+.pp{
+    border-right:1px dotted white;
+    width:50px;
+    height:38px;
+    float:left;
+}
+.rr{
+    border:1px solid lightseagreen;
+    width:90px;
+    height:38px;
+    float:left;
+    text-align:center;
+}
+
+.table{
+    border:1px solid navy;
+    width:99%;
+    margin-left:1%;
+    height:342px;
+    overflow-y:auto;
+    margin-top:1px;
+}
+.box_1{
+    border:1px solid silver;
+    height:25px;
+    text-align:center;
+    font-size:14px;
+    margin-top:1px;
+    background:lavender;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.a{
+    border:1px solid lavender;
+    height:23px;
+    width:65px;
+    float:left;
+}
+.b{
+    border:1px solid lavender;
+    height:23px;
+    width:82px;
+    float:left;
+}
+.c{
+    border:1px solid lavender;
+    height:23px;
+    width:184px;
+    float:left;
+}
+.d{
+    border:1px solid lavender;
+    height:23px;
+    width:96px;
+    float:left;
+}
+.e{
+    border:1px solid lavender;
+    height:23px;
+    width:96px;
+    float:left;
+}
+.f{
+    border:1px solid lavender;
+    height:23px;
+    width:129px;
+    float:left;
+}
+.g{
+    border:1px solid lavender;
+    height:23px;
+    width:65px;
+    float:left;
+}
+.h{
+    border:1px solid lavender;
+    height:22px;
+    width:80px;
+    float:left;
+}
+.i{
+    border:1px solid lavender;
+    height:22px;
+    width:90px;
+    float:left;
+}
+.j{
+    border:1px solid lavender;
+    height:22px;
+    width:124px;
+    float:left;
+}
+.k{
+    border:1px solid lavender;
+    height:23px;
+    width:60px;
+    float:left;
+}
+.l{
+    border:1px solid lavender;
+    height:22px;
+    width:90px;
+    float:left;
+}
+.m{
+    border:1px solid lavender;
+    height:22px;
+    width:100px;
+    float:left;
+}
+.n{
+    border:1px solid lavender;
+    height:22px;
+    width:62px;
+    float:left;
+}
+.o{
+    border:1px solid silver;
+    height:23px;
+    width:52px;
+    float:left;
+    font-size:12px;
+    text-align:center;
+}
+.edi{
+    border:1px solid blue;
+    height:23px;
+    width:30px;
+    float:left;
+    background:silver;
+}
+.de{
+    border:1px solid crimson;
+    height:23px;
+    width:30px;
+    float:left;
+    background:silver;
+}
+.se{
+    border:1px solid green;
+    height:23px;
+    width:30px;
+    float:left;
+    background:silver;
+}
+
+.q{
+    border:1px solid lavender;
+    height:23px;
+    width:31px;
+    float:left;
+}
+.v{
+    border:1px solid lavender;
+    height:23px;
+    width:53px;
+    float:left;
+}
+.form_container{
+    border:1px solid silver;
+    width:98%;
+    margin-left:1%;
+    margin-top:2px;
+    height:165px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.form{
+    border:1px solid green;
+    width:98%;
+    margin-left:1%;
+    margin-top:50px;
+    height:145px;
+}
+.modal {
+  /*display: none;*/
+  position: fixed;
+  z-index: 1;
+  border:1px solid silver;
+  width:96%;
+  margin-left:1%;
+  margin-top:5px;
+  height:120px;
+}
+.btn{
+    margin-left:15px;
+    padding:8px;
+    background:dodgerblue;
+    border:1px solid gray;
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+}
+.btn:hover{
+    background:blue;
+}
+.filter{
+    margin-left:12px;
+    padding:8px;
+    width:100px;
+    background:limegreen;
+    border:2px solid gray;
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+}
+.filter:hover{
+    background:red;
+}
+.form2{
+    border:1px solid silver;
+    width:300px;
+    height:25px;
+    float:right;
+    margin-right:100px;
+    margin-top:8px;
+    font-size:14px;
+    padding:3px;
+}
+.form1{
+    border:1px solid white;
+    width:500px;
+    height:35px;
+    float:right;
+    margin-right:10px;
+    margin-top:2px;
+}
+.search{
+    border:1px solid silver;
+    width:494px;
+    padding:6px;
+    margin:2px;
+}
+.cust{
+    border:1px solid white;
+    width:175px;
+    height:50px;
+    float:left;
+    font-size:12px;
+    margin-left:3px;
+    margin-top:8px;
+}
+.cust1{
+    border:1px solid white;
+    width:175px;
+    height:50px;
+    float:left;
+    font-size:12px;
+    margin-left:3px;
+    margin-top:8px;
+}
+.save{
+    float:left;
+    margin-top:26px;
+    margin-left:5px;
+    padding:5px;
+    width:100px;
+    background:mediumseagreen;
+    border:1px solid green;
+    color:white;
+}
+.save:hover{
+    background:lime;
+}
+.b_sms{
+    float:left;
+    margin-top:26px;
+    margin-left:5px;
+    padding:5px;
+    width:100px;
+    background:cornflowerblue;
+    border:1px solid green;
+    color:azure;
+}
+.b_sms:hover{
+    background:navy;
+}
+.b_wp{
+    float:left;
+    margin-top:26px;
+    margin-left:5px;
+    padding:5px;
+    width:100px;
+    background:limegreen;
+    border:1px solid green;
+    color:azure;
+}
+.b_wp:hover{
+    background:green;
+}
+.close{
+    float:left;
+    margin-top:26px;
+    margin-left:5px;
+    padding:5px;
+    width:100px;
+    background:red;
+    border:1px solid red;
+    color:white;
+}
+.close:hover{
+    background:orange;
+}
+.text{
+    margin-left:5px;
+    font-size:14px;
+    color:midnightblue;
+}
+.type{
+    height:28px;
+    width:173px;
+    margin:2px;
+}
+.dropbtn {
+  background-color:midnightblue;
+  color: white;
+  padding:3px;
+  font-size:12px;
+  border: none;
+  width:50px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-size:12px;
+  font-weight:bold;
+}
+.dropdown-content a {
+  color: black;
+  padding: 6px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: silver;}
+
+.ui-widget{
+    font-size:14px;
+}
+</style>
+
+
+<!--------------------------------------form-start------------------------------------------------------------------------>
+<div class="form_container">
+    <button class="btn" onclick="document.getElementById('id01').style.display='block'">Add New Customer</button>
+    <button class="filter" >Filter Off</button>
+    <div class="form1"><input class="search" type="text" placeholder="Search by Customer Name & Contact......"/></div>
+    <div class="form2">Total No.Of Data Showing :</div>
+    <div id="id01" class="modal">
+        <form id="form" class="">
+            <div class="cust">
+                <label class="text"><b>Customer Name</b></label>
+                <input type="text" onkeydown="return /[a-z]/i.test(event.key)" name="cust_name" class="type" required>
+            </div>
+            <div class="cust">
+                <label class="text"><b>Contact</b></label>
+                <input type="text" minlength="10" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" name="cust_contact1" class="type" required>
+            </div>
+            <div class="cust">
+                <label class="text" ><b>Contact 2 (optional)</b></label>
+                <input type="text" minlength="10" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1').replace(/^0[^.]/, '0');" name="cust_contact2" class="type" required>
+            </div>
+            <div class="cust">
+                <label class="text " for="tags"><b>Customer Location</b></label>
+                <input class="type ui-widget" id="tags" name="cust_location" required>
+            </div>
+            <div class="cust">
+                <label class="text" ><b>Ref.</b></label>
+                <input type="text" name="ref" class="type" required>
+            </div>
+            <div class="cust">
+                <label class="text" ><b>For Sale/Rent</b></label>
+                <select class="type" name="type" required>
+                    <option selected disabled>--Select Sale Or Rent--</option>
+                    <option>Sale</option>
+                    <option>Rent</option>
+                    <option>Heavy.DP</option>
+                    <option>Bank Auction</option>
+                </select>
+            </div>
+            <div class="cust">
+                <label class="text" ><b>Property Type</b></label>
+                <select class="type" name="prop_type" required >
+                    <option selected disabled>--Select Property Type--</option>
+                    <option>1RK</option>
+                    <option>1BHK</option>
+                    <option>2BHK</option>
+                    <option>3BHK+</option>
+                    <option>Office</option>
+                    <option>Shop-Gala</option>
+                    <option>P.G</option>
+                    <option>Bunglow-Rowhouse</option>
+                    <option>Chawl</option>
+                    <option>Land</option>
+                </select>
+            </div>
+            <div class="cust">
+                <label class="text" for="req"><b>Required Location</b></label>
+                 <input class="type ui-widget" id="req" name="req_location" required>
+            </div>
+            <div class="cust1">
+                <label class="text" ><b>Budget</b></label>
+                <input type="text" name="budget" class="type" required>
+            </div>
+            <div class="cust1">
+                <label class="text" ><b>FeedBack</b></label>
+                <select class="type" name="feedback" required>
+                    <option selected disabled>--Select Customer Feedback--</option>
+                    <option>Not.Int</option>
+                    <option>Not.Rech</option>
+                    <option>Ring-Busy</option>
+                    <option>Interested</option>
+                    <option>Swi.Off</option>
+                    <option>Deal-Done</option>
+                    <option>Netwrk prob</option>
+                    <option>Invalid</option>
+                    <option>Beep Sound</option>
+                    <option>Call Me Back</option>
+                </select>
+            </div>
+            <div class="cust1">
+                <label class="text" ><b>Next Call Date</b></label>
+                <input type="date" name="call_date" class="type" placeholder="DD/MM/YYYY" style="height:28px;" required>
+            </div>
+            <div class="cust1">
+                <label class="text" ><b>Time</b></label>
+                <select class="type" name="follow_time" required>
+                    <option selected disabled>--Select Call Time--</option>
+                    <option>8am</option>
+                    <option>9am</option>
+                    <option>10am</option>
+                    <option>11am</option>
+                    <option>12am</option>
+                    <option>1pm</option>
+                    <option>2pm</option>
+                    <option>3pm</option>
+                    <option>4pm</option>
+                    <option>5pm</option>
+                    <option>6pm</option>
+                    <option>7pm</option>
+                    <option>8pm</option>
+                    <option>9pm</option>
+                </select>
+            </div>
+            <div class="cust1">
+                <label class="text" ><b>Type Note</b></label>
+                <input type="text" name="note" class="type"  placeholder="--Type Here--"  required>
+            </div>
+            <button class="save" type="submit">Save</button>
+            <button onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">Close</button>
+        </form>
+         <button class="b_sms" type="submit">Bulk SMS</button>
+         <button class="b_wp" type="submit">Bulk SMS WP</button>
+
+    </div>
+</div>
+<!-----------------tabel head------------------------------------------------------------------------------------------>
+<div class="tab_head">
+    <h6 class="aa">S.N</h6>
+    <h6 class="bb">First Call </h6>
+    <h6 class=" cc">Customer Name</h6>
+    <h6 class=" dd">Contact</h6>
+    <h6 class=" ee"> Contact 2 (optional)</h6>
+    <h6 class="ss">Customer Location</h6>
+    <h6 class=" gg" >Ref.</h6>
+    <h6 class="hh" style="background:limegreen">Sale / Rent (filter)</h6>
+    <h6 class="ii" style="background:limegreen">Prop.Type (filter)</h6>
+    <h6 class="jj" style="background:limegreen">Reqd.Loc (filter)</h6>
+    <h6 class="kk">Budget</h6>
+    <h6 class="mm" style="background:cornflowerblue">Feedback (Logic)</h6>
+    <h6 class="nn" style="background:cornflowerblue">Next Call Date (Logic)</h6>
+    <h6 class="oo" style="background:cornflowerblue">Time (Logic)</h6>
+    <h6 class="pp">Note</h6>
+    <h6 class="rr">Action</h6>
+</div>
+<!-----------------------------table----------------------------------------------------------------------------------->
+<div class="table">
+    <div class="box_1" >
+        <div class="a">0000001</div>
+        <div class="b">22/05/2022</div>
+        <div class="c">Sachin Vishwakarma Naidu</div>
+        <div class="d">8888888888</div>
+        <div class="e">8888888888</div>
+        <div class="f">Nallasopara W</div>
+        <div class="g">pamp</div>
+        <div class="h">
+            <select class="h" style="background:lavender" required>
+                <option selected disabled>select</option>
+                <option>Sale</option>
+                <option>Rent</option>
+                <option>Heavy.DP</option>
+                <option>Bank Auction</option>
+            </select>
+        </div>
+        <div class="i">
+            <select class="i" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>1RK</option>
+                <option>1BHK</option>
+                <option>2BHK</option>
+                <option>3BHK+</option>
+                <option>Office</option>
+                <option>Shop-Gala</option>
+                <option>P.G</option>
+                <option>Bunglow-Rowhouse</option>
+                <option>Chawl</option>
+                <option>Land</option>
+            </select>
+        </div>
+        <div class="j">
+            <select class="j" required style="background:lavender">
+                <option>Virar E</option>
+                <option>Virar W</option>
+                <option>Nallasopara E</option>
+                <option>Nallasopara W</option>
+                <option>Vasai E</option>
+                <option>Vasai W</option>
+                <option>Naigao E</option>
+                <option>Naigao W</option>
+            </select>
+        </div>
+        <div class="k">90,000</div>
+        <div class="l">
+            <select class="l" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>Not.Int</option>
+                <option>Not.Rech</option>
+                <option>Ring-Busy</option>
+                <option>Call Back</option>
+                <option>Swi.Off</option>
+                <option>Deal-Done</option>
+                <option>Net.Issue</option>
+                <option>Invalid</option>
+                <option>Beep Sound</option>
+            </select>
+        </div>
+        <div class="m"><input type="date" class="m"   required style="background:lavender"></div>
+        <div class="n">
+            <select class="n" required style="background:lavender">
+                <option selected disabled>select</option>
+                <option>8am</option>
+                <option>9am</option>
+                <option>10am</option>
+                <option>11am</option>
+                <option>12am</option>
+                <option>1pm</option>
+                <option>2pm</option>
+                <option>3pm</option>
+                <option>4pm</option>
+                <option>5pm</option>
+                <option>6pm</option>
+                <option>7pm</option>
+                <option>8pm</option>
+                <option>9pm</option>
+            </select>
+        </div>
+        <div class="o">NOTE</div>
+        <div class="edi"><i class="fa-solid fa-pen-to-square" style="margin-top:4px;color:blue;"></i></div>
+        <div class="se"><i class="fas fa-save" style="margin-top:4px;color:green;"></i></div>
+        <div class="de"><i class="fa-solid fa-trash-can" style="margin-top:4px;color:red;"></i></div>
+
+
+<!--        <div id="pp" class="dropdown">-->
+<!--            <button class="dropbtn">Action</button>-->
+<!--            <div class="dropdown-content">-->
+<!--                <a href="#" style="background:limegreen">Save</a>-->
+<!--                <a href="#" style="background:orangered">Delete</a>-->
+<!--                <a href="#" style="background:skyblue">SMS</a>-->
+<!--                <a href="#" style="background:lightseagreen">WP SMS</a>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</div>
+
+
+<script>
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script>
+  $( function() {
+    var availableTags = ["Airoli East", "Airoli West ", "Ambernath East", "Ambernath West", "Ambivali", "Andheri East","Andheri West",
+          "Apta", "Asangaon", "Atgaon", "Badlapur East", "Badlapur West", "Bamandongri", "Bandra East","Bandra West",
+          "Belapur West", "Bhandup East", "Bhandup West", "Bhayander", "Bhivpuri Road", "Bhiwandi","Boisar West", "Borivali East",
+          "Borivali West", "Byculla East", "Byculla West", "CSMT", "Charni East", "Charni West", "Chembur",
+          "Chinchpokli", "Chunabhatti", "Churchgate East", "Churchgate West", "Cotton Green","Curry Road East", "Curry Road West",
+          "Dadar East", "Dadar West", "Dahanu Road", "Dahisar East", "Dahisar West", "Dativali","Diva JN East", "Diva JN West", "Dockyard", "Dolavli",
+          "Dombivli East", "Dombivali West", "Dronagiri", "Elphistone Road East", "Elphistone Road West","GTB Nagar", "Ghansoli",
+          "Ghatkopar East", "Ghatkopar West", "Goregaon East", "Goregaon West", "Govandi East","Govandi West", "Grant Road East", "Grant Road West", "Hamrapur",
+          "Jite", "Jogeshwari East", "Jogeshwari West", "Juchandra Road", "Juinagar East", "Juinagar West","Kalamboli", "Kalva East", "Kalva West",
+          "Kalyan East", "Kalyan West", "Kaman Road", "Kamothe", "Kandivali East", "Kandivali West","Kanjur Marg East", "Kanjur Marg West", "Karjat",
+          "Kasara", "Kasu", "Kelavli", "Kelva Road", "Khadavli", "Khandeshwar", "Khar East", "Khar West","Kharbao", "Khardi", "Kharghar", "Kharkopar",
+          "Khopoli", "Kings Circle", "Kopar East", "Kopar West", "Koparkhairne", "Kurla East", "Kurla West","Lower Parel East", "Lower Parel West",
+          "Lowjee", "Mahalakshmi East", "Mahalakshmi West", "Mahim JN East", "Mahim JN West", "Malad East","Malad West", "Mansarovar", "Mankhurd East",
+          "Mankhurd West", "Marine Lines East", "Marin Lines West", "Masjid Bunder", "Matunga East","Matunga West", "Matunga Road East",
+          "Matunga Road West", "Mira Road East", "Mira Road West", "Mulund", "Mumbai Central East","Mumbai Central West", "Mumbra East", "Mumbra West", "Nahur East",
+          "Nahur West", "Naigaon East", "Naigaon West", "NallaSopara East", "NallaSopara West","Nariman Point", "Navade Road", "Navi Mumbai", "Neral",
+          "Nerul", "Nidi", "Nilje", "Oshiwara", "Palasdhari", "Palghar", "Panvel East", "Panvel West","Parel East", "Parel West", "Pen", "Powai", "Prabhadevi",
+          "Rabale", "Ranjanpada", "Ram Mandir", "Rasayani", "Reay Road", "Roha", "Sagar Sangam","Sakinaka East", "Sakinaka West", "Sandhurst Road East",
+          "Sandhurst Road West", "Sanpada", "SantaCruz East", "SantaCruz West", "Saphale", "Seawood Darave","Sewri", "Shahad", "Shelu", "Sion", "Somtane",
+          "Taloja", "Thakurali East", "Thakurli West", "Thane East", "Thane West", "Thansit","Tilaknagar East", "Tilaknagar West", "Titwala", "Turbhe",
+          "Ulhasnagar East", "Ulhasnagar West", "Umroli Road", "Umbermali", "Uran", "Vadala Road East","Vadala Road West", "Vaitarana", "Vangani",
+          "Vangaon", "Vasai Road East", "Vasai Road West", "Vashi East", "Vashi West", "Vasind","VidyaVihar East", "VidyaVihar West", "Vikhroli",
+          "Vile Parle East", "Vile Parle West", "Virar East", "Virar West", "Vithalwadi East","Vithalwadi West", "Wadala"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+    $( "#req" ).autocomplete({
+      source: availableTags
+    });
+  });
+</script>
+<script>
+
+</script>
+
+{% endblock %}
